@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header .heroImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+header nav {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 9rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header nav .logo {
+  width: 150px;
+  height: auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li{
+    position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+
+    &::after{
+                    content: '';
+                    width: 0;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -5px;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: 0.5s;
+                }
+  }
+}
+
+header ul a:hover::after{
+    width: 100%;
+}
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  padding: 0 9rem;
+  width: 65%;
+
+  .textContent {
+    border: 2px #fff solid;
+    padding: 20px 20px;
+
+    p {
+      font-size: 5rem;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+    }
+  }
+}
+
+section {
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.container1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .textContainer {
+    position: absolute;
+    background-color: #fff;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    top: 33%;
+    right: 40px;
+
+    h1 {
+      font-size: 3rem;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 18px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 400;
+      margin-top: 30px;
+      color: hsl(0, 0%, 35%);
+    }
+  }
+}
+
+.ourCreatorsCont {
+  .navOurCreator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Josefin Sans", sans-serif;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+    }
+
+    button {
+      padding: 10px 50px;
+      border: solid 2px black;
+      transition: 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      font-weight: 500;
+
+      &:hover {
+        background-color: black;
+        a {
+          color: white;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
+      letter-spacing: 2px;
+      transition: 0.5s ease-in-out;
+      font-weight: 600;
+    }
+  }
+}
+
+.gridCards {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 90px;
+  display: grid;
+  gap: 30px;
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+
+    &:hover {
+      .cardImage {
+        transform: scale(1.05);
+      }
+
+      .overlay {
+        opacity: 1;
+      }
+
+      h2 {
+        color: #000;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.76);
+      z-index: 1;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    .cardImage {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease;
+      filter: brightness(0.8);
+    }
+
+    h2 {
+      position: absolute;
+      bottom: 40px;
+      left: 30px;
+      color: #ffffff;
+      z-index: 4;
+      width: 180px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 300;
+      font-size: 35px;
+      transition: 0.5s;
+    }
+  }
+}
+
+.gridCards .card:nth-of-type(4) h2 {
+  width: 120px;
+}
+
+footer{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 8rem;
+    gap: 50px;
+    .social{
+        display: flex;
+        justify-content: space-between;
+
+        .socialIcons{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    }
+
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 100%;
+
+        span{
+        color: #888888;
+    }
+
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+
+            li{
+                position: relative;
+            }
+
+            a{
+                color: #888888;
+                text-decoration: none;
+                font-weight: 400;
+                transition: .5s;
+
+                &:hover{
+                    color: #fff;
+                }
+
+                &::after{
+                    content: '';
+                    width: 0;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -5px;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+}
+
+.navigation ul a:hover::after{
+    width: 100%;
+}
