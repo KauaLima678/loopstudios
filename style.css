@@ -319,8 +319,9 @@ footer {
   }
 
   nav {
-    left: 20% !important;
+    left: 19% !important;
     gap: 50px;
+    width: 100% !important;
   }
 
   .bar {
@@ -348,7 +349,7 @@ footer {
     padding: 0 1rem !important;
 
     p {
-      font-size: 3rem !important;
+      font-size: 2.5rem !important;
     }
   }
 
