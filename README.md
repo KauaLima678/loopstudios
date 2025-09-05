@@ -11,7 +11,7 @@ Este projeto é uma landing page responsiva desenvolvida como parte de um desafi
 ![Preview Desktop](./images/LoopPreview.png)
 ### Mobile
 
-![Preview Mobile](./design/mobile-design.jpg)
+![Preview Mobile](./images/LoopStudios%20Mobile.png)
 
 ---
 
